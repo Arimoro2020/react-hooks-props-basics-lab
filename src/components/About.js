@@ -1,12 +1,15 @@
 import React from "react";
+import Links from './Links';
 
-function About() {
+function About({user}) {
+  const{links, bio} = user
   return (
     <div id="about">
       <h2>About Me</h2>
-      <p>Put the bio in here</p>
+      <p>{bio? bio:null }</p>
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
       {/* add your <Links /> component here */}
+      <Links linkedin={links.linkedin} github={links.github}/>
     </div>
   );
 }

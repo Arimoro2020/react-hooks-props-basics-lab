@@ -7,12 +7,16 @@ import About from "./About";
 import user from "../data/user";
 console.log(user);
 
+
 function App() {
+
+
+
   return (
     <div>
       <NavBar />
-      <Home />
-      <About />
+      <Home user={user}/>
+      <About user={user}/>
     </div>
   );
 }
